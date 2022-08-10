@@ -86,16 +86,14 @@ def fetch(username: str):
     filename = cache_path()
     if os.path.exists(filename):
         with open(filename) as fh:
-            print('read from cache')
-            return fh.read()
+            return True, fh.read()
 
-    print('miss cache')
     content = do_fetch(username)
     with open(filename, "w") as fh:
         fh.write(content)
-    return content
+    return False, content
 
 
 if __name__ == '__main__':
     username = 'yz6'
-    content = fetch(username)
+    cached, content = fetch(username)

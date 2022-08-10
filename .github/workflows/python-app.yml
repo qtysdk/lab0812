@@ -25,3 +25,9 @@ jobs:
       run: |
         curl -s ifconfig.me
         git status
+        python runner.py
+        
+        git config --global user.name 'otto'
+        git config --global user.email 'otto@users.noreply.github.com'
+        git commit -am "Automated report"
+        git push

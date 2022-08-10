@@ -1,0 +1,8 @@
+selenium
+requests[socks]
+pyquery
+jupyter
+
+webdriver-manager
+flask
+pandas

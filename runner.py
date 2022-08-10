@@ -16,7 +16,7 @@ if __name__ == '__main__':
         count += 1
 
         # stop the runner
-        if count >= 6:
+        if count >= 9:
             break
 
     print("skip", skip_count)

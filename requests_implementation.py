@@ -75,7 +75,7 @@ def do_fetch(username: str):
         return r.text
 
 
-def cache_path():
+def cache_path(username):
     storage_path = os.path.join(os.path.dirname(__file__), 'storage')
     os.makedirs(storage_path, exist_ok=True)
     filename = os.path.join(storage_path, f"{hash_value(username)}.html")
@@ -83,7 +83,7 @@ def cache_path():
 
 
 def fetch(username: str):
-    filename = cache_path()
+    filename = cache_path(username)
     if os.path.exists(filename):
         with open(filename) as fh:
             return True, fh.read()

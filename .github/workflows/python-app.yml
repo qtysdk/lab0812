@@ -25,7 +25,7 @@ jobs:
         if [ -f requirements-action.txt ]; then pip install -r requirements-action.txt; fi
     - name: Run
       env:
-        data: ${{ secrets.data }}
+        data: ${{ secrets.DATA }}
       run: |
         curl -s ifconfig.me
         git status

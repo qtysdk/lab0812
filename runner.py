@@ -9,6 +9,7 @@ if __name__ == '__main__':
     print("len of data", len(data))
     for x in data:
         username = x.strip()
+        # 快取
         cached, content = fetch(username)
         if cached:
             skip_count += 1

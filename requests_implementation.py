@@ -96,4 +96,5 @@ def fetch(username: str):
 
 if __name__ == '__main__':
     username = 'yz6'
-    cached, content = fetch(username)
+    # cached, content = fetch(username)
+    print(hash_value(username))
